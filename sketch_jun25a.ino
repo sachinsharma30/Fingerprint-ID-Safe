@@ -1,34 +1,4 @@
 
-/*************************************************** 
-  This is an example sketch for our optical Fingerprint sensor
-fp:green2,white3,red5v,blackgnd
-servo: red5v, blackgnd, yellow8
-  Designed specifically to work with the Adafruit BM085 Breakout 
-  ----> http://www.adafruit.com/products/751
-
-  These displays use TTL Serial to communicate, 2 pins are required to 
-  interface
-  Adafruit invests time and resources providing this open source code, 
-  please support Adafruit and open-source hardware by purchasing 
-  products from Adafruit!
-
-  Written by Limor Fried/Ladyada for Adafruit Industries.  
-  BSD license, all text above must be included in any redistribution
- ****************************************************/
-
-#include <Keypad.h>
-#include <Servo.h>
-#include <Adafruit_Fingerprint.h>
-
-
-// On Leonardo/Micro or others with hardware serial, use those! #0 is green wire, #1 is white
-// uncomment this line:
-// #define mySerial Serial1
-
-// For UNO and others without hardware serial, we must use software serial...
-// pin #2 is IN from sensor (GREEN wire)
-// pin #3 is OUT from arduino  (WHITE wire)
-// comment these two lines if using hardware serial
 SoftwareSerial mySerial(11, 12);
 
 Adafruit_Fingerprint finger = Adafruit_Fingerprint(&mySerial);
